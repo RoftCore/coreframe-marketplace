@@ -3,8 +3,10 @@
 (() => {
   'use strict';
 
-  const REPO = 'Explotador72/roftcore-marketplace';
-  const PAGE = 'https://explotador72.github.io/roftcore-marketplace/';
+  const REPO = 'Explotador72/coreframe-marketplace';
+  // Derived from the address bar, so the site is identical on the Pages host and on
+  // the custom domain, and the URL the page offers is always the one it was served from.
+  const PAGE = location.origin + location.pathname.replace(/[^/]*$/, '');
   const REGISTRY_URL = PAGE + 'registry.json';
 
   const $ = (id) => document.getElementById(id);

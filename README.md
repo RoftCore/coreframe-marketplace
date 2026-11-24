@@ -3,8 +3,23 @@
 The official extension marketplace for **CoreFrame**: a static site (GitHub Pages) plus the
 `registry.json` that CoreFrame fetches.
 
-- **Site:** <https://explotador72.github.io/roftcore-marketplace/>
-- **Registry (what CoreFrame reads):** <https://explotador72.github.io/roftcore-marketplace/registry.json>
+- **Site (canonical):** <https://coreframe-marketplace.roftcore.work/>
+- **Registry (what CoreFrame reads):** `https://coreframe-marketplace.roftcore.work/registry.json`
+- **Until the custom domain is live:** <https://explotador72.github.io/coreframe-marketplace/>
+
+### Custom domain
+
+`coreframe-marketplace.roftcore.work` is served by GitHub Pages, so DNS points at the Pages host,
+not at an IP:
+
+| Type | Name | Content | Proxy |
+|---|---|---|---|
+| CNAME | `coreframe-marketplace` | `explotador72.github.io` | **DNS only** (grey cloud) while the certificate is issued |
+
+Then set it in the repository: *Settings → Pages → Custom domain*, tick **Enforce HTTPS** once the
+certificate is ready (a few minutes), and commit a `CNAME` file containing the domain. The site
+derives its own registry URL from the address bar, so nothing else has to change when the domain
+goes live.
 
 ## How CoreFrame uses it
 

@@ -1,9 +1,9 @@
 {
-  "$schema": "https://github.com/Explotador72/roftcore-marketplace/raw/main/registry.schema.json",
+  "$schema": "https://github.com/Explotador72/coreframe-marketplace/raw/main/registry.schema.json",
   "name": "RoftCore Marketplace",
   "publisher": "RoftCore",
-  "repository": "https://github.com/Explotador72/roftcore-marketplace",
-  "site": "https://explotador72.github.io/roftcore-marketplace/",
+  "repository": "https://github.com/Explotador72/coreframe-marketplace",
+  "site": "https://coreframe-marketplace.roftcore.work/",
   "updated": "2026-11-24",
   "extensions": [
     {
