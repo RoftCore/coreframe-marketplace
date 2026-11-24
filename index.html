@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RoftCore Marketplace — CoreFrame extensions</title>
+<meta name="description" content="The official CoreFrame extension marketplace. Verified extensions, one registry URL.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230d0d1a'/><text x='16' y='23' font-size='19' font-family='monospace' font-weight='700' text-anchor='middle' fill='%2300d4ff'>C</text></svg>">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="logo">CF</span>
+    <div>
+      <h1>RoftCore Marketplace</h1>
+      <p class="tagline">Verified extensions for CoreFrame. Every release is reviewed before it appears here.</p>
+    </div>
+  </div>
+  <div class="stats" id="stats">
+    <span class="stat"><b id="count-ext">—</b> extensions</span>
+    <span class="stat"><b id="count-ver">—</b> releases</span>
+    <span class="stat">updated <b id="updated">—</b></span>
+  </div>
+</header>
+
+<section class="howto">
+  <div class="howto-text">
+    <h2>Use this marketplace in CoreFrame</h2>
+    <p>CoreFrame → <b>Install</b> (<code>+</code>) → <b>Marketplace</b>. It already points here. To use a mirror or another
+      marketplace, replace the registry URL in <code>coreframe.json</code>:</p>
+    <div class="urlbox">
+      <code id="registry-url">—</code>
+      <button class="btn" id="copy-url" type="button">Copy</button>
+    </div>
+  </div>
+</section>
+
+<section class="controls">
+  <input id="search" type="search" placeholder="Search by name, description, author…" autocomplete="off" spellcheck="false">
+  <div class="chips" id="categories"></div>
+  <select id="sort" aria-label="Sort">
+    <option value="name">Sort: name</option>
+    <option value="updated">Sort: version</option>
+    <option value="author">Sort: author</option>
+  </select>
+</section>
+
+<main id="grid" class="grid" aria-live="polite"></main>
+<p id="empty" class="empty" hidden>No extension matches that search.</p>
+
+<footer>
+  <div>
+    <h3>Publish your extension</h3>
+    <p>Only verified releases are listed, and only the maintainer edits this registry. The flow is:
+      you publish a release, you open a submission issue, it gets reviewed, it appears here and in CoreFrame —
+      no account, no upload form.</p>
+    <p><a class="link" id="submit-link" href="#">Submit an extension →</a></p>
+  </div>
+  <div class="footer-meta">
+    <p><a class="link" href="docs/FORMAT.md">Registry format</a> · <a class="link" href="docs/VERIFY.md">Review checklist</a></p>
+    <p class="muted">RoftCore Marketplace · registry is GPL-3.0-or-later, free to mirror</p>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

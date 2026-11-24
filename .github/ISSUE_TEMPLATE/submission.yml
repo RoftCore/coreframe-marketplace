@@ -1,0 +1,132 @@
+name: Extension submission
+description: Ask for an extension to be listed in the RoftCore Marketplace
+title: "[submission] "
+labels: ["submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Only the maintainer edits the registry. Filling this in does not publish anything: it starts
+        a review against [docs/VERIFY.md](../blob/main/docs/VERIFY.md), and the result is posted here.
+
+        Read [docs/FORMAT.md](../blob/main/docs/FORMAT.md) first — most rejections are a zip that
+        wraps the extension in an extra folder, a `download_url` that is not immutable, or an `id`
+        that does not match the manifest.
+
+  - type: input
+    id: ext_id
+    attributes:
+      label: Extension id
+      description: Exactly the `id` inside your extension.json (lowercase, digits and underscores).
+      placeholder: my_extension
+    validations:
+      required: true
+
+  - type: input
+    id: name
+    attributes:
+      label: Display name
+      placeholder: My Extension
+    validations:
+      required: true
+
+  - type: input
+    id: author
+    attributes:
+      label: Author
+      description: How you want to be credited on the card.
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: One-sentence description
+      description: What it does, not how. This is what a user reads before installing.
+      attributes:
+        maxlength: 200
+    validations:
+      required: true
+
+  - type: input
+    id: category
+    attributes:
+      label: Category
+      description: A short label; the site filters by it.
+      placeholder: system
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platforms
+    attributes:
+      label: Platforms
+      multiple: true
+      options:
+        - windows
+        - linux
+        - macos
+    validations:
+      required: true
+
+  - type: dropdown
+    id: permission
+    attributes:
+      label: Permission level declared in the manifest
+      options:
+        - basic (0)
+        - storage (1)
+        - user_files (2)
+        - network (3)
+        - system (4)
+        - admin (5)
+    validations:
+      required: true
+
+  - type: textarea
+    id: versions
+    attributes:
+      label: Releases
+      description: One per line, newest first — `version download_url`. The URL must end in `.zip` and must not be replaceable.
+      placeholder: |
+        1.1 https://github.com/you/my-extension/releases/download/v1.1/my_extension.zip
+        1.0 https://github.com/you/my-extension/releases/download/v1.0/my_extension.zip
+    validations:
+      required: true
+
+  - type: input
+    id: repository
+    attributes:
+      label: Source repository
+      placeholder: https://github.com/you/my-extension
+
+  - type: input
+    id: license
+    attributes:
+      label: License of the extension
+      description: CoreFrame itself is GPL-3.0-or-later; extensions may use any license, but it must be stated.
+      placeholder: MIT
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: declarations
+    attributes:
+      label: Declarations
+      options:
+        - label: The code is mine, or I have the right to distribute it, and I can answer questions about it.
+          required: true
+        - label: The release asset is immutable — new code goes to a new version, never to the same URL.
+          required: true
+        - label: It contains no telemetry, no credential harvesting and no network calls beyond what the description implies.
+          required: true
+        - label: It installs in a clean CoreFrame, loads without console errors, and its widgets and menu actions work.
+          required: true
+        - label: I understand that a listing can be removed if a later release breaks these rules.
+          required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else
+      description: Dependencies, data the extension writes, known limitations, or why it needs its permission level.

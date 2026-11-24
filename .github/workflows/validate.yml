@@ -1,0 +1,29 @@
+name: Validate registry
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      # CoreFrame fetches this file from a URL with no validation of its own, so a
+      # typo here is a broken marketplace for every user, not a broken page.
+      - name: Validate registry.json
+        run: python tools/validate.py
+
+      - name: Check the site references a real registry
+        run: |
+          test -f registry.json
+          test -f registry.schema.json
+          grep -q 'registry.json' assets/app.js
+          echo "site files present"
