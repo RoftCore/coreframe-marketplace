@@ -14,7 +14,7 @@ not at an IP:
 
 | Type | Name | Content | Proxy |
 |---|---|---|---|
-| CNAME | `coreframe-marketplace` | `explotador72.github.io` | **DNS only** (grey cloud) while the certificate is issued |
+| CNAME | `coreframe-marketplace` | `roftcore.github.io` | **DNS only** (grey cloud) while the certificate is issued |
 
 Then set it in the repository: *Settings → Pages → Custom domain*, tick **Enforce HTTPS** once the
 certificate is ready (a few minutes), and commit a `CNAME` file containing the domain. The site
