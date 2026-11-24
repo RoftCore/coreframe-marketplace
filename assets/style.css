@@ -43,17 +43,11 @@ a:hover { text-decoration: underline; }
 .brand { display: flex; gap: 14px; align-items: center; }
 
 .logo {
-  display: grid;
-  place-items: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 10px;
-  border: 1px solid rgba(0, 212, 255, 0.45);
-  color: var(--accent);
-  font-family: var(--mono);
-  font-weight: 700;
-  letter-spacing: 1px;
-  background: var(--accent-dim);
+  display: block;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  object-fit: contain;
 }
 
 .topbar h1 { margin: 0; font-size: 19px; letter-spacing: 0.3px; }
