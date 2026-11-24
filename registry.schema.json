@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://github.com/Explotador72/coreframe-marketplace/raw/main/registry.schema.json",
+  "$id": "https://github.com/RoftCore/coreframe-marketplace/raw/main/registry.schema.json",
   "title": "CoreFrame marketplace registry",
   "description": "The file CoreFrame fetches from its marketplace URL. CoreFrame itself only reads extensions[].id, .name, .version, .download_url and .versions[]; every other field is for the site and for humans, and extra fields are ignored by the app.",
   "type": "object",

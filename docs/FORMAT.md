@@ -5,10 +5,10 @@
 
 ```json
 {
-  "$schema": "https://github.com/Explotador72/coreframe-marketplace/raw/main/registry.schema.json",
+  "$schema": "https://github.com/RoftCore/coreframe-marketplace/raw/main/registry.schema.json",
   "name": "RoftCore Marketplace",
   "publisher": "RoftCore",
-  "repository": "https://github.com/Explotador72/coreframe-marketplace",
+  "repository": "https://github.com/RoftCore/coreframe-marketplace",
   "site": "https://coreframe-marketplace.roftcore.work/",
   "updated": "2026-11-24",
   "extensions": [

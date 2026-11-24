@@ -5,7 +5,7 @@ The official extension marketplace for **CoreFrame**: a static site (GitHub Page
 
 - **Site (canonical):** <https://coreframe-marketplace.roftcore.work/>
 - **Registry (what CoreFrame reads):** `https://coreframe-marketplace.roftcore.work/registry.json`
-- **Until the custom domain is live:** <https://explotador72.github.io/coreframe-marketplace/>
+- **Until the custom domain is live:** <https://roftcore.github.io/coreframe-marketplace/>
 
 ### Custom domain
 
@@ -44,7 +44,7 @@ submission is reviewed first:
 
 1. **Publish a release** with the packaged `.zip` (CoreFrame → Package, or any zip whose root
    folder contains `extension.json`). Use a stable tag and an `https://` URL that ends in `.zip`.
-2. **Open a submission issue** — [Submit an extension](https://github.com/Explotador72/coreframe-marketplace/issues/new?template=submission.yml).
+2. **Open a submission issue** — [Submit an extension](https://github.com/RoftCore/coreframe-marketplace/issues/new?template=submission.yml).
    The form asks for the id, author, description, category and the release URL.
 3. **Review** against [`docs/VERIFY.md`](docs/VERIFY.md). A submission that fails gets a comment
    saying exactly what to change; nothing is published silently.
