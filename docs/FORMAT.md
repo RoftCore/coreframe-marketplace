@@ -76,9 +76,27 @@ CoreFrame picks `versions[0]` when nobody asks for a specific version.
 
 - `https://` only, path ending in `.zip`. The marketplace is served over HTTPS and a mixed-content
   zip is a broken install waiting to happen.
-- Must stay stable. Republishing different bytes under the same URL is the one thing this registry
-  cannot detect, which is why the review checklist insists on immutable release assets.
+- Must stay stable. Republishing different bytes under the same URL is the one thing a reviewer
+  cannot see, which is why `sha256` is recorded next to every URL.
 - GitHub Releases are the expected host: `https://github.com/<owner>/<repo>/releases/download/<tag>/<id>.zip`.
+
+### Hashes (`sha256`, `size`)
+
+Both are **generated, never edited by hand**:
+
+```bash
+python tools/hash_registry.py --write   # downloads every release, records sha256 + size
+python tools/hash_registry.py --check   # CI: fails when an asset stops matching
+```
+
+- CoreFrame downloads a release, hashes it and refuses to install when the bytes do not match the
+  `sha256` in the registry. The error says so explicitly and nothing is written to disk.
+- CI runs `--check` on every push, so a release republished under the same URL turns the build red
+  instead of reaching a user.
+- The site shows the short hash and the size on each version row; the full value is in the tooltip.
+
+An entry without a hash still installs (the check is skipped), but a submission without one is not
+accepted: an unhashed release is a promise, not a check.
 
 ## Adding an entry
 

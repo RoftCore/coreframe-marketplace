@@ -4,32 +4,8 @@
   "publisher": "RoftCore",
   "repository": "https://github.com/RoftCore/coreframe-marketplace",
   "site": "https://coreframe-marketplace.roftcore.work/",
-  "updated": "2026-11-24",
+  "updated": "2026-11-25",
   "extensions": [
-    {
-      "id": "app_carousel",
-      "name": "App Carousel",
-      "version": "1.0",
-      "author": "SentinelGD",
-      "description": "Quick-switch between extensions with a circular carousel",
-      "category": "ui",
-      "icon": "circle",
-      "platforms": [
-        "windows",
-        "linux"
-      ],
-      "grid_size": {
-        "w": 1,
-        "h": 1
-      },
-      "versions": [
-        {
-          "version": "1.0",
-          "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/app_carousel/app_carousel.zip"
-        }
-      ],
-      "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/app_carousel/app_carousel.zip"
-    },
     {
       "id": "console",
       "name": "Console",
@@ -49,11 +25,15 @@
       "versions": [
         {
           "version": "3.1",
-          "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/console-3.1/console.zip"
+          "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/console-3.1/console.zip",
+          "sha256": "8b491d4fff9630a070d0e65ef2a8e3b62c568e8799dd9177c6dfea150bb794c5",
+          "size": 98749
         },
         {
           "version": "3.0",
-          "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/console-1.1/console.zip"
+          "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/console-1.1/console.zip",
+          "sha256": "97d437aabc4916dae9c97601b12ccb5e6e9e378e78e108796fec8f500760512d",
+          "size": 97922
         }
       ],
       "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/console-3.1/console.zip"
@@ -77,11 +57,15 @@
       "versions": [
         {
           "version": "1.1",
-          "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/fortune_cookie-1.1/fortune_cookie-1.1.zip"
+          "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/fortune_cookie-1.1/fortune_cookie-1.1.zip",
+          "sha256": "e967caebcfb73e6d7e03cdc9c2c078d8c9a0cce204ffc91d3e30cfea024309c4",
+          "size": 10256
         },
         {
           "version": "1.0",
-          "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/fortune_cookie/fortune_cookie.zip"
+          "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/fortune_cookie/fortune_cookie.zip",
+          "sha256": "84a5fc92d473521a9b6ce2094dbf66791c8dbdad59d022985418ba63a7997cf6",
+          "size": 4710
         }
       ],
       "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/fortune_cookie-1.1/fortune_cookie-1.1.zip"
@@ -105,7 +89,9 @@
       "versions": [
         {
           "version": "1.0",
-          "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/idea_canvas/ideas_canvas.zip"
+          "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/idea_canvas/ideas_canvas.zip",
+          "sha256": "9f2dfc7c5b3cf431a2dfeec1dfa3f6aadf678b75cb07a476965f08bdd4f926fe",
+          "size": 15565
         }
       ],
       "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/idea_canvas/ideas_canvas.zip"
@@ -129,7 +115,9 @@
       "versions": [
         {
           "version": "1.0",
-          "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/image_gallery/image_gallery.zip"
+          "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/image_gallery/image_gallery.zip",
+          "sha256": "144437c397c3d01cfb19f2870f3290ca1c0fab5994b4f7b498c51c7f9715807e",
+          "size": 14115
         }
       ],
       "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/image_gallery/image_gallery.zip"
@@ -153,11 +141,15 @@
       "versions": [
         {
           "version": "1.1",
-          "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/metadata_stripper-1.1/metadata_stripper-1.1.zip"
+          "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/metadata_stripper-1.1/metadata_stripper-1.1.zip",
+          "sha256": "fb809b4d4d324ddb076053f080f50fc960b73023b09bace936f964eb5ea695d2",
+          "size": 22591
         },
         {
           "version": "1.0",
-          "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/metadata_stripper/metadata_stripper.zip"
+          "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/metadata_stripper/metadata_stripper.zip",
+          "sha256": "eab246251d87dcaba1c738a6d860b79043b2f98e45e6f4d2160cf413f8f6ec94",
+          "size": 11272
         }
       ],
       "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/metadata_stripper-1.1/metadata_stripper-1.1.zip"
@@ -180,7 +172,9 @@
       "versions": [
         {
           "version": "1.4",
-          "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/network_monitor/network_monitor.zip"
+          "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/network_monitor/network_monitor.zip",
+          "sha256": "b99d85ccf2f8a931e045d6d0f49eaaa8f86bdc87882b783cfa6f9764a05fdbd6",
+          "size": 20633
         }
       ],
       "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/network_monitor/network_monitor.zip"
@@ -204,7 +198,9 @@
       "versions": [
         {
           "version": "1.1",
-          "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/notes-1.1/notes-1.1.zip"
+          "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/notes-1.1/notes-1.1.zip",
+          "sha256": "49831e7a167acd84e684256b628bdaca518d5bcb532f46a9f7e9bd6e3a0e164b",
+          "size": 5565
         }
       ],
       "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/notes-1.1/notes-1.1.zip"
@@ -228,7 +224,9 @@
       "versions": [
         {
           "version": "1.12",
-          "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/opencore-1.12/opencore-1.12.zip"
+          "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/opencore-1.12/opencore-1.12.zip",
+          "sha256": "48ec49fd6214eb3cf8403babc48ab64d011a87261f92982d438b03237074d4e8",
+          "size": 40785
         }
       ],
       "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/opencore-1.12/opencore-1.12.zip"
@@ -252,7 +250,9 @@
       "versions": [
         {
           "version": "1.2",
-          "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/process_manager/process_manager.zip"
+          "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/process_manager/process_manager.zip",
+          "sha256": "98eb890ebde5cc55f95ca4bc726de98b26f0817379071d26edb0f484476ee020",
+          "size": 12877
         }
       ],
       "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/process_manager/process_manager.zip"
@@ -276,7 +276,9 @@
       "versions": [
         {
           "version": "1.0",
-          "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/spotify_downloader/spotify_downloader.zip"
+          "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/spotify_downloader/spotify_downloader.zip",
+          "sha256": "b1939b823b847d5d488a18e7d7e43b7514e2bffafe30f0ed9e925a1d2bb4fe0a",
+          "size": 11568
         }
       ],
       "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/spotify_downloader/spotify_downloader.zip"
@@ -300,7 +302,9 @@
       "versions": [
         {
           "version": "1.1",
-          "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/system_monitor/system_monitor.zip"
+          "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/system_monitor/system_monitor.zip",
+          "sha256": "f49346f0a6c7032a85344f618be95a0e8f55fb8fbe56359ddb3987fabc9ed5c3",
+          "size": 2545
         }
       ],
       "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/system_monitor/system_monitor.zip"
@@ -324,7 +328,9 @@
       "versions": [
         {
           "version": "1.1",
-          "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/vault_manager/vault_manager.zip"
+          "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/vault_manager/vault_manager.zip",
+          "sha256": "8b6cedb1179bdfbe3837c4c7e5ab1d8dfcb77c617f591a2eb8faf79bc584dc6c",
+          "size": 5880
         }
       ],
       "download_url": "https://github.com/RoftCore/extensions-coreframe/releases/download/vault_manager/vault_manager.zip"

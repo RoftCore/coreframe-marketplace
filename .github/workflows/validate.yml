@@ -21,6 +21,12 @@ jobs:
       - name: Validate registry.json
         run: python tools/validate.py
 
+      # A reviewer reads the diff; nobody watches a release asset afterwards.
+      # This fails the build when the bytes behind a URL stop matching the hash
+      # CoreFrame checks before installing.
+      - name: Verify release hashes
+        run: python tools/hash_registry.py --check
+
       - name: Check the site references a real registry
         run: |
           test -f registry.json

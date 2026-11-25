@@ -204,6 +204,15 @@ a:hover { text-decoration: underline; }
   font-size: 12px;
 }
 .version-row span { color: var(--muted); }
+.version-row .version-hash {
+  margin-left: auto;
+  margin-right: 6px;
+  font-size: 10px;
+  color: #5f5f7d;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .version-row a { color: var(--accent); }
 
 .btn {

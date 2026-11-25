@@ -89,11 +89,19 @@
       ? ext.versions
       : [{ version: ext.version, download_url: ext.download_url }];
     const platforms = (ext.platforms || []).map((p) => `<span class="pill">${esc(p)}</span>`).join('');
-    const rows = versions.map((v) => `
+    const rows = versions.map((v) => {
+      // The hash is what CoreFrame compares before installing; showing it keeps the
+      // promise checkable by hand too.
+      const sha = v.sha256 ? String(v.sha256) : '';
+      const size = v.size ? (v.size < 1024 ? v.size + ' B' : Math.round(v.size / 1024) + ' KB') : '';
+      const hint = sha ? sha.slice(0, 12) + '…' + (size ? ' · ' + size : '') : size;
+      return `
       <div class="version-row">
         <span>${esc(v.version)}</span>
-        <a href="${esc(v.download_url)}" rel="noopener" title="Download the .zip">download</a>
-      </div>`).join('');
+        ${hint ? `<span class="version-hash" title="${esc(sha || size)}">${esc(hint)}</span>` : ''}
+        <a href="${esc(v.download_url)}" rel="noopener" title="${esc(sha || 'Download the .zip')}">download</a>
+      </div>`;
+    }).join('');
 
     return `
       <article class="card">
